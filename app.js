@@ -29,13 +29,18 @@ let unsub;
 
 const todoValue = document.getElementById("todo-value");
 addBtn.addEventListener("click", async () => {
-    try {
-        await addDoc(collection(db, "todo-list"), {
-            value: todoValue.value,
-            timestamp: new Date(),
-        });
-    } catch (e) {
-        console.error("Error adding document: ", e);
+    if (todoValue.value.trim() !== "") {
+
+        try {
+            await addDoc(collection(db, "todo-list"), {
+                value: todoValue.value,
+                timestamp: new Date(),
+            });
+        } catch (e) {
+            console.error("Error adding document: ", e);
+        }
+    }else{
+        alert("Type Something")
     }
 })
 let getTodo = () => {
