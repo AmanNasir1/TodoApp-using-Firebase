@@ -1,4 +1,4 @@
 # TodoApp Using Firebase
-Link: [todoappusingfirebase.netlify.app]
+Link: (todoappusingfirebase.netlify.app)
 
 Updated todoapp using database 
